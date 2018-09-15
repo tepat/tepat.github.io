@@ -9,6 +9,7 @@ body {
   position: absolute;
   top: 0px;
   left: 50px;
+
   /* transform: translate(-50%, -50%); */
 }
 
@@ -22,6 +23,9 @@ ul {
   margin: 0px;
 }
 
+table{
+  text-align: center;
+}
 ul li {
   list-style-type: decimal-leading-zero;
 }
