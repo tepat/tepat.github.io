@@ -14,28 +14,30 @@ var quotes = [  "Having guts always works out for me!",
 
 let rand = Math.random();
 var currentQuote = Math.floor(rand*quotes.length);
-document.getElementById("author").classList.add("hide");
+$('#author').addClass('hide');
 
 
 document.onkeydown = function(event) {
     var x = event.keyCode;
-    if(x == 13){
-        document.getElementById("quotes").innerHTML = quotes[currentQuote];
-        document.getElementById("author").classList.remove("hide");
-    } else if(x == 8){
-        document.getElementById("quotes").innerHTML = "Type anything here";
+    if(x == 13){ //enter
+        $('#quotes').html(quotes[currentQuote]);
+        $('#author').removeClass('hide');
+    } else if(x == 8){ //del
+        $('#quotes').addClass('animated flipInX');
+        $('#quotes').html("Type anything here ...");
         currentQuote = Math.floor(Math.random()*quotes.length);
-        document.getElementById("author").classList.add("hide");
-    } else if(x != 13){
-        if(document.getElementById("quotes").innerHTML == "Type anything here"){
-            document.getElementById("quotes").innerHTML = "";
+        $('#author').addClass('hide');
+    } else {  //any keys
+        $('#quotes').removeClass('animated flipInX');
+        if($('#quotes').html() == "Type anything here ..."){
+            $('#quotes').html("");
         }
         let currentPos = document.getElementById("quotes").innerHTML.length;
         console.log(currentPos);
         console.log(currentQuote)
         document.getElementById("quotes").innerHTML += quotes[currentQuote].substr(currentPos,1);
         if(currentPos>=quotes[currentQuote].length-1){
-            document.getElementById("author").classList.remove("hide");
+            $('#author').removeClass('hide');
         }
     }
 }
