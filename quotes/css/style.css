@@ -1,0 +1,27 @@
+#main{
+    margin: 20%;
+    font-size: large;
+    position: relative;
+}
+
+#quotes{
+    background-color: black;
+    color: white;
+    text-align: center;
+    position: absolute;
+    top: 50%; /* poussé de la moitié de hauteur du référent */
+    transform: translateY(-50%);
+    width:100%;
+}
+
+#author{
+    text-align: right;
+    transition: opacity 0.5s;
+    position: absolute;
+    width: 100%;
+    margin-top: 60px;
+}
+
+.hide {
+    opacity: 0;
+}
