@@ -4,6 +4,17 @@ body {
   background: lavenderblush;
   font-weight: bold;
   text-align: center;
+  text-transform: uppercase;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 400px 400px;
+  grid-column-gap: 40px;
+  grid-row-gap: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 840px;
 }
 
 .container {
