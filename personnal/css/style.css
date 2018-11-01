@@ -3,20 +3,30 @@ body {
   font-family: 'Inconsolada', monospace;
   background: lavenderblush;
   font-weight: bold;
+  text-align: center;
 }
 
 .container {
+  /*
   position: absolute;
   top: 0px;
   left: 50px;
+  transform: translate(-50%, -50%); 
+  */
+}
 
-  /* transform: translate(-50%, -50%); */
+.fondnoir{
+  background-color: black;
+  color: lavenderblush;
+}
+
+table {
+  margin:auto;
 }
 
 .header {
   color: black;
   font-family: 'Inconsolada', monospace;
-  text-align: left;
 }
 
 ul {
