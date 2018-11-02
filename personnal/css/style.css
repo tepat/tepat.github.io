@@ -10,6 +10,8 @@ body {
 .wrapper {
   margin: auto;
   width: 400px;
+  grid-row-gap: 40px;
+  grid-column-gap: 40px;
 }
 
 .box{
